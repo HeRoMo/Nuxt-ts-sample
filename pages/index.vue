@@ -20,6 +20,9 @@ import Card from "~/components/Card.vue"
 })
 export default class extends Vue {
   @State people
+  async fetch({store, app}) {
+    await store.dispatch('loadData', {app});
+  }
 }
 </script>
 <style scoped lang="sass">

@@ -9,7 +9,7 @@ export const mutations = {
 }
 
 export const actions = {
-  async nuxtServerInit({ commit }, { app }) {
+  async loadData({ commit }, { app }) {
     const people = await app.$axios.$get(
       "./random-data.json"
     )
