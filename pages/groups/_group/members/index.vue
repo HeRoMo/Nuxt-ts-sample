@@ -12,10 +12,10 @@ div
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
-const FILE_NAME = 'pages/index.vue'
+const FILE_NAME = 'pages/groups/_group/members/index.vue'
 
 @Component
-class GroupIndex extends Vue {
+class MemberIndex extends Vue {
   @Prop({ default: FILE_NAME }) fileName!: string
 
   asyncData() {
@@ -47,12 +47,12 @@ class GroupIndex extends Vue {
     console.log(`mounted IN ${this.fileName}`)
   }
 }
-export default GroupIndex
+export default MemberIndex
 </script>
 
 <style lang="sass" scoped>
 section
-  border: solid 1px red
-  background-color: #FF82B2
+  border: solid 1px green
+  background-color: #D6FF58
   padding: 3px
 </style>

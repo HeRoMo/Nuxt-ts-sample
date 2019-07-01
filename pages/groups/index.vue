@@ -12,7 +12,7 @@ div
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
-const FILE_NAME = 'pages/index.vue'
+const FILE_NAME = 'pages/groups/index.vue'
 
 @Component
 class GroupIndex extends Vue {
@@ -52,7 +52,7 @@ export default GroupIndex
 
 <style lang="sass" scoped>
 section
-  border: solid 1px red
-  background-color: #FF82B2
+  border: solid 1px orange
+  background-color: #FF8856
   padding: 3px
 </style>

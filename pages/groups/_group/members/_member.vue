@@ -6,16 +6,16 @@ div
       li ROUTE NAME: {{JSON.stringify($route.name)}}
       li PATH: {{JSON.stringify($route.path)}}
       li PARAMS: {{JSON.stringify($route.params)}}
-    nuxt-child
+  nuxt-child
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 
-const FILE_NAME = 'pages/index.vue'
+const FILE_NAME = 'pages/groups/_group/members/_member.vue'
 
 @Component
-class GroupIndex extends Vue {
+class Member extends Vue {
   @Prop({ default: FILE_NAME }) fileName!: string
 
   asyncData() {
@@ -47,12 +47,12 @@ class GroupIndex extends Vue {
     console.log(`mounted IN ${this.fileName}`)
   }
 }
-export default GroupIndex
+export default Member
 </script>
 
 <style lang="sass" scoped>
 section
-  border: solid 1px red
-  background-color: #FF82B2
+  border: solid 1px blue
+  background-color: #75A9FF
   padding: 3px
 </style>
