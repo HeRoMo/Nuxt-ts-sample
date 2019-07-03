@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  section(v-if="isMtachName")
+  section(v-if="matchName")
     h1 FILE: {{fileName}}
     ul
       li ROUTE NAME: {{JSON.stringify($route.name)}}
@@ -18,7 +18,7 @@ const FILE_NAME = 'pages/groups/_group.vue'
 class Group extends Vue {
   @Prop({ default: FILE_NAME }) fileName!: string
 
-  get isMtachName(): boolean {
+  get matchName(): boolean {
     return this.$route.name === 'groups-group'
   }
 
